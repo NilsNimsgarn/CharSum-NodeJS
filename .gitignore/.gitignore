@@ -13,10 +13,9 @@ process.stdin.on("end", function () {
 function main(input)
 {
     var summe = 0;
-    for(var x=0;x<3;x++)
+    for(var x=0;x<input.length;x++)
     {
-        var a = input.substring(x,x+1).charCodeAt(0)-96;
-        summe=summe+a;
+        summe += input.substring(x,x+1).charCodeAt(0)-96;
     }
         console.log(summe);
 }
