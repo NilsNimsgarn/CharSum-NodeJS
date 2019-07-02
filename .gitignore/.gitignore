@@ -1,0 +1,22 @@
+process.stdin.resume();
+process.stdin.setEncoding("utf-8");
+var stdin_input = "";
+
+process.stdin.on("data", function (input) {
+    stdin_input += input;
+});
+
+process.stdin.on("end", function () {
+   main(stdin_input);
+});
+
+function main(input)
+{
+    var summe = 0;
+    for(var x=0;x<3;x++)
+    {
+        var a = input.substring(x,x+1).charCodeAt(0)-96;
+        summe=summe+a;
+    }
+        console.log(summe);
+}
